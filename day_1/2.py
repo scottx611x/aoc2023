@@ -16,7 +16,7 @@ number_map = {
 
 pattern = re.compile(r"(?=(" + "|".join(number_map.keys()) + "|[0-9]))")
 
-with open("input_day_1.txt") as f:
+with open("input.txt") as f:
     data = f.readlines()
 
 for line in data:
