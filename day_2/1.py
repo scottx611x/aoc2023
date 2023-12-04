@@ -10,8 +10,6 @@ valid_game_criteria = {
 }
 
 games_pattern = re.compile(r"Game\s(?P<game_id>\d+):\s(?P<game_data>.*)")
-individual_game_pattern = re.compile(r"(\d+\s(red|green|blue))+")
-
 valid_game_ids = []
 
 
