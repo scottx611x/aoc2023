@@ -26,13 +26,9 @@ class PartNumber(SchematicMatch):
 
     def is_adjacent_to_symbol(self, symbols: List[Symbol]) -> bool:
         for symbol in symbols:
-            if self.line_number == symbol.line_number:
-                if self.start_pos == symbol.end_pos or symbol.start_pos == self.end_pos:
-                    return True
-            else:
-                match_bounds = list(range(self.start_pos, self.end_pos + 1))
-                if any([symbol.start_pos in match_bounds, symbol.end_pos in match_bounds]):
-                    return True
+            match_bounds = list(range(self.start_pos, self.end_pos + 1))
+            if any([symbol.start_pos in match_bounds, symbol.end_pos in match_bounds]):
+                return True
 
         return False
 
